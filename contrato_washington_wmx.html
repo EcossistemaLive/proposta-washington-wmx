@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrato — Washington / WMX Global Imports — Live Consultoria</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12pt;
+      line-height: 1.7;
+      color: #000000;
+      background-color: #ffffff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 20mm;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 36px;
+      border-bottom: 3px solid #06192a;
+      padding-bottom: 24px;
+    }
+
+    .header-logo {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .header-logo img {
+      height: 42px;
+    }
+
+    .header h1 {
+      font-size: 15pt;
+      font-weight: bold;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #06192a;
+    }
+
+    .header .subtitle {
+      font-size: 10pt;
+      color: #555;
+      letter-spacing: 1px;
+    }
+
+    .parties {
+      margin-bottom: 32px;
+    }
+
+    .party {
+      margin-bottom: 20px;
+      padding: 16px 20px;
+      border: 1px solid #06192a;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .party-title {
+      font-weight: bold;
+      font-size: 11pt;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #06192a;
+      border-bottom: 1px solid #06192a;
+      padding-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .party p {
+      margin-bottom: 4px;
+      font-size: 11pt;
+    }
+
+    .section {
+      margin-bottom: 28px;
+      page-break-inside: avoid;
+    }
+
+    .section-title {
+      font-size: 12pt;
+      font-weight: bold;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 6px;
+      color: #06192a;
+      letter-spacing: 0.5px;
+    }
+
+    .clause-content {
+      text-align: justify;
+      margin-left: 10px;
+      font-size: 11pt;
+      line-height: 1.75;
+    }
+
+    .clause-content p {
+      margin-bottom: 10px;
+    }
+
+    .clause-content ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .clause-content li {
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #06192a;
+    }
+
+    .currency {
+      font-weight: bold;
+      font-size: 13pt;
+      color: #008000;
+      background-color: #f0fff0;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    .installments-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+
+    .installments-table th {
+      background: #06192a;
+      color: #ffffff;
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 10pt;
+    }
+
+    .installments-table td {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+    }
+
+    .installments-table tr:nth-child(even) td {
+      background: #f5f5f5;
+    }
+
+    .deliverables-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+
+    .deliverables-table th {
+      background: #06192a;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .deliverables-table td {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    .deliverables-table tr:nth-child(even) td {
+      background: #f9f9f9;
+    }
+
+    .signatures {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      page-break-inside: avoid;
+    }
+
+    .signature-block {
+      text-align: center;
+      width: 44%;
+    }
+
+    .signature-line {
+      border-top: 2px solid #000000;
+      margin-top: 70px;
+      padding-top: 10px;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+
+    .signature-line strong {
+      font-size: 11pt;
+    }
+
+    .witnesses {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      page-break-inside: avoid;
+    }
+
+    .witness-block {
+      text-align: center;
+      width: 44%;
+    }
+
+    .witness-line {
+      border-top: 1px solid #000;
+      margin-top: 50px;
+      padding-top: 8px;
+      font-size: 10pt;
+    }
+
+    .print-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #00e800;
+      color: #06192a;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 13px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      z-index: 1000;
+      font-family: Arial, sans-serif;
+    }
+
+    .print-button:hover { background-color: #00cc00; }
+
+    .developer-credit {
+      font-size: 0.7rem;
+      opacity: 0.4;
+      font-style: italic;
+      text-align: center;
+      margin-top: 40px;
+      color: #666;
+    }
+
+    .accent-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #06192a, #00e800, #06192a);
+      margin-bottom: 24px;
+      border-radius: 2px;
+    }
+
+    @media print {
+      body { margin: 0; padding: 15mm; font-size: 11pt; }
+      .no-print { display: none !important; }
+      .print-button { display: none !important; }
+      .section { page-break-inside: avoid; }
+      .party { background-color: #ffffff; }
+    }
+
+    @page {
+      margin: 2cm;
+      size: A4;
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-button no-print" onclick="window.print()">🖨️ Salvar como PDF</button>
+
+<div class="accent-bar"></div>
+
+<div class="header">
+  <div class="header-logo">
+    <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-36.png" alt="Live Consultoria" onerror="this.style.display='none'">
+  </div>
+  <h1>Contrato de Prestação de Serviços de Consultoria</h1>
+  <div class="subtitle">Live Consultoria Empresarial · Goiânia – GO</div>
+</div>
+
+<div class="parties">
+
+  <div class="party">
+    <div class="party-title">Contratante</div>
+    <p><strong>Nome:</strong> Washington ________________________ (nome completo)</p>
+    <p><strong>CPF:</strong> ___.___.___-__</p>
+    <p><strong>Empresa(s):</strong> WMX Global Imports e/ou empresa têxtil a ser constituída</p>
+    <p><strong>CNPJ:</strong> A ser informado na formalização</p>
+    <p><strong>Endereço:</strong> _____________________________________________ Goiânia – GO</p>
+    <p><strong>E-mail:</strong> ____________________________________________</p>
+  </div>
+
+  <div class="party">
+    <div class="party-title">Contratada</div>
+    <p><strong>Razão Social:</strong> Live Consultoria Empresarial Ltda</p>
+    <p><strong>Representante Legal:</strong> Luiz Portal</p>
+    <p><strong>E-mail:</strong> luiz@live.com.br</p>
+    <p><strong>Cidade/Estado:</strong> Goiânia – GO</p>
+  </div>
+
+</div>
+
+<!-- ========================= CLÁUSULAS ========================= -->
+
+<div class="section">
+  <div class="section-title">Cláusula 1ª — Do Objeto</div>
+  <div class="clause-content">
+    <p>O presente Contrato tem por objeto a prestação de serviços de <span class="highlight">consultoria estratégica</span> para a estruturação de dois negócios de importação do Contratante, conforme diagnóstico realizado em reunião de levantamento datada de junho de 2026, nos seguintes escopos:</p>
+    <ul>
+      <li><strong>Negócio 1 — Tecidos / Confecção:</strong> Importação de tecidos da China com estruturação de operação via Lei Maquila no Paraguai para manufatura e exportação ao Brasil.</li>
+      <li><strong>Negócio 2 — Drones Agrícolas:</strong> Importação de drones agrícolas de pulverização e suas peças da China, com estratégia de comercialização B2B para o agronegócio brasileiro.</li>
+    </ul>
+    <p>Os serviços abrangem inteligência de negócio, curadoria de fornecedores, estruturação jurídico-tributária (Lei Maquila), governança societária e acompanhamento da primeira remessa, conforme detalhado na Cláusula 3ª.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 2ª — Do Prazo de Execução</div>
+  <div class="clause-content">
+    <p>Os serviços serão executados em até <span class="highlight">12 (doze) semanas corridas</span> a partir da data de assinatura deste instrumento, podendo ser prorrogado de comum acordo entre as partes por razões alheias à vontade da Contratada, tais como atrasos no fornecimento de informações pelo Contratante ou morosidade de órgãos públicos estrangeiros.</p>
+    <p>O cronograma detalhado com as entregas e marcos intermediários foi apresentado ao Contratante na proposta comercial e é parte integrante deste contrato.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 3ª — Dos Entregáveis e Escopo</div>
+  <div class="clause-content">
+    <p>A Contratada se compromete a entregar os seguintes produtos e serviços, observado o cronograma acordado:</p>
+
+    <table class="deliverables-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Entregável</th>
+          <th>Prazo (semanas)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td>Estudo de Viabilidade Financeira — DRE projetado, breakeven e ROI para os dois negócios (3 cenários)</td>
+          <td>1–2</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>Curadoria e Validação de até 4 Fornecedores Chineses (2 tecido + 2 drone/peças) com fichas técnicas e recomendação</td>
+          <td>1–3</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>Relatório de Estruturação da Lei Maquila — Paraguai: requisitos, capital, estrutura jurídica, comparativo tributário e visita técnica de prospecção</td>
+          <td>2–5</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td>Rascunho de Acordo de Sócios e Cap Table para os dois negócios, incluindo vesting e política de distribuição de lucros</td>
+          <td>3–5</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td>Acompanhamento operacional da 1ª Remessa Teste — Tecidos (China → Brasil): seleção de despachante, acompanhamento aduaneiro, relatório de custo real</td>
+          <td>6–10</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td>Go-to-Market Drones Agrícolas: estrutura de canal (concessionárias + base rural), precificação final e ativação de plataforma alternativa</td>
+          <td>8–12</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Os custos diretos de importação (frete internacional, tributos, despachante aduaneiro, taxas de registro no Paraguai e capital de giro para remessas) são de responsabilidade exclusiva do Contratante e não integram o valor desta contratação.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 4ª — Do Valor e Forma de Pagamento</div>
+  <div class="clause-content">
+    <p>O valor total dos serviços contratados é de <span class="currency">R$ 35.000,00 (trinta e cinco mil reais)</span>, a ser pago conforme os marcos abaixo:</p>
+
+    <table class="installments-table">
+      <thead>
+        <tr>
+          <th>Parcela</th>
+          <th>Valor</th>
+          <th>Vencimento / Marco</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1ª Parcela (40%)</strong></td>
+          <td><strong>R$ 14.000,00</strong></td>
+          <td>Na assinatura deste contrato</td>
+        </tr>
+        <tr>
+          <td><strong>2ª Parcela (30%)</strong></td>
+          <td><strong>R$ 10.500,00</strong></td>
+          <td>Na entrega do Estudo de Viabilidade Financeira validado</td>
+        </tr>
+        <tr>
+          <td><strong>3ª Parcela (30%)</strong></td>
+          <td><strong>R$ 10.500,00</strong></td>
+          <td>Na conclusão e relatório da 1ª Remessa Teste</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Os pagamentos serão realizados via transferência bancária (TED/PIX) para conta indicada pela Contratada. O atraso no pagamento de qualquer parcela superior a 5 (cinco) dias corridos autoriza a Contratada a suspender a execução dos serviços até a regularização, sem caracterizar inadimplência da Contratada.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 5ª — Das Obrigações do Contratante</div>
+  <div class="clause-content">
+    <p>Para a boa execução dos serviços, o Contratante se compromete a:</p>
+    <ul>
+      <li>Fornecer em até 5 dias úteis após a assinatura todos os dados financeiros solicitados (mix de produtos, margens, volume de vendas atual do sócio têxtil e capacidade de investimento confirmada por negócio);</li>
+      <li>Disponibilizar acesso às conversas e cotações já realizadas com fornecedores chineses;</li>
+      <li>Viabilizar reuniões entre a Contratada e os sócios especialistas (área têxtil e drones) quando solicitado;</li>
+      <li>Indicar o valor confirmado pelo investidor para cada negócio no prazo de 10 dias corridos após a assinatura;</li>
+      <li>Responder às solicitações de validação e confirmação da Contratada em até 48 horas úteis.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 6ª — Das Obrigações da Contratada</div>
+  <div class="clause-content">
+    <p>A Contratada se compromete a:</p>
+    <ul>
+      <li>Executar os serviços com diligência, ética e observância ao prazo estabelecido;</li>
+      <li>Manter sigilo absoluto sobre as informações comerciais, financeiras e estratégicas compartilhadas pelo Contratante (LGPD — Lei 13.709/2018);</li>
+      <li>Comunicar imediatamente ao Contratante qualquer impedimento ou risco identificado que possa comprometer a viabilidade de qualquer dos dois negócios;</li>
+      <li>Acionar sua rede de parceiros (logística internacional, consultoria tributária paraguaia, parceiros de canal) com transparência sobre capacidade e prazos reais;</li>
+      <li>Ser brutalmente honesta na avaliação de viabilidade, indicando quando um cenário não apresenta retorno adequado, sem otimismo artificial.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 7ª — Da Confidencialidade e Propriedade Intelectual</div>
+  <div class="clause-content">
+    <p>Todas as informações trocadas durante a execução dos serviços são consideradas confidenciais. Os entregáveis produzidos (estudos, relatórios, planilhas) são de propriedade do Contratante após o pagamento integral. A Contratada poderá utilizar o caso como referência genérica de portfólio, sem identificação das partes, salvo autorização expressa do Contratante.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 8ª — Da Rescisão</div>
+  <div class="clause-content">
+    <p>Qualquer das partes poderá rescindir o presente contrato mediante notificação por escrito com antecedência mínima de 10 (dez) dias corridos, nas seguintes condições:</p>
+    <ul>
+      <li><strong>Rescisão pelo Contratante:</strong> Pagamento dos serviços já realizados até a data da notificação, calculados proporcionalmente ao escopo executado. Os entregáveis já concluídos serão entregues ao Contratante.</li>
+      <li><strong>Rescisão pela Contratada:</strong> Devolução da parcela relativa aos serviços ainda não iniciados. Os entregáveis já concluídos serão entregues ao Contratante.</li>
+      <li><strong>Rescisão por inadimplência:</strong> Em caso de inadimplência do Contratante por período superior a 15 (quinze) dias corridos, a Contratada poderá rescindir imediatamente e reter os valores já pagos como indenização pelos trabalhos realizados.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 9ª — Da Limitação de Responsabilidade</div>
+  <div class="clause-content">
+    <p>A Contratada presta serviços de consultoria estratégica, assessoria e acesso a rede de parceiros. A decisão final de investimento, contratação de fornecedores, abertura de empresas e realização de remessas é exclusiva do Contratante. A Contratada não se responsabiliza por:</p>
+    <ul>
+      <li>Perdas decorrentes de decisões tomadas pelo Contratante em desacordo com as recomendações da consultoria;</li>
+      <li>Oscilações cambiais, mudanças de legislação tributária ou atos de terceiros (fornecedores, órgãos públicos, transportadoras);</li>
+      <li>Resultados de negócio, que dependem de fatores de mercado além do controle da Contratada.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Cláusula 10ª — Do Foro</div>
+  <div class="clause-content">
+    <p>Fica eleito o foro da Comarca de <span class="highlight">Goiânia – GO</span> para dirimir quaisquer controvérsias oriundas deste contrato, com renúncia a qualquer outro, por mais privilegiado que seja.</p>
+    <p>E por estarem assim acordados e ajustados, firmam o presente instrumento em 2 (duas) vias de igual teor e forma.</p>
+    <p style="margin-top: 20px;">Goiânia – GO, _______ de __________________ de 2026.</p>
+  </div>
+</div>
+
+<!-- ASSINATURAS -->
+<div class="signatures">
+  <div class="signature-block">
+    <div class="signature-line">
+      <strong>Washington ___________________________</strong><br>
+      CPF: ___.___.___-__<br>
+      Contratante<br>
+      WMX Global Imports
+    </div>
+  </div>
+  <div class="signature-block">
+    <div class="signature-line">
+      <strong>Luiz Portal</strong><br>
+      Live Consultoria Empresarial Ltda<br>
+      Consultor Responsável
+    </div>
+  </div>
+</div>
+
+<div class="witnesses">
+  <div class="witness-block">
+    <div class="witness-line">
+      Testemunha 1<br>
+      Nome: _____________________________<br>
+      CPF: ___.___.___-__
+    </div>
+  </div>
+  <div class="witness-block">
+    <div class="witness-line">
+      Testemunha 2<br>
+      Nome: _____________________________<br>
+      CPF: ___.___.___-__
+    </div>
+  </div>
+</div>
+
+<div class="developer-credit">Desenvolvido por Cléber Donato</div>
+
+</body>
+</html>
