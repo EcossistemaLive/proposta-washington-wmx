@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta Comercial — WMX Global Imports | Live Consultoria</title>
+  <meta name="description" content="Proposta de consultoria estratégica para estruturação de dois negócios de importação: tecidos via Lei Maquila (Paraguai) e drones agrícolas — Live Consultoria Empresarial">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --live-deep: #06192a;
+      --live-glass: rgba(10, 36, 61, 0.75);
+      --live-glass-hover: rgba(15, 45, 75, 0.90);
+      --live-accent: #00e800;
+      --live-accent-dim: rgba(0, 232, 0, 0.15);
+      --live-white: #ffffff;
+      --live-gray-light: #f8f9fa;
+      --live-gray-mid: #6c757d;
+      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-active: rgba(0, 232, 0, 0.5);
+      --spring-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-fluid: cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Merriweather', serif;
+      background: var(--live-deep);
+      color: var(--live-white);
+      overflow-x: hidden;
+    }
+
+    /* ===== HERO HEADER ===== */
+    .hero {
+      background: linear-gradient(135deg, #06192a 0%, #0a2440 50%, #0d2e50 100%);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png');
+      opacity: 0.06;
+    }
+
+    .hero-accent-bar {
+      height: 5px;
+      background: linear-gradient(90deg, var(--live-accent) 0%, #00ff88 50%, var(--live-accent) 100%);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .hero-inner {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 60px;
+      position: relative;
+      z-index: 2;
+      gap: 40px;
+    }
+
+    .hero-logo-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    .hero-logo-area img {
+      height: 54px;
+      filter: drop-shadow(0 2px 12px rgba(0,232,0,0.3));
+    }
+
+    .logo-divider {
+      width: 2px;
+      height: 48px;
+      background: var(--border-active);
+    }
+
+    .hero-badge {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--live-accent);
+      border: 1px solid var(--border-active);
+      border-radius: 4px;
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
+    .hero-text { flex: 1; }
+
+    .hero-subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--live-accent);
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--live-white);
+      margin-bottom: 14px;
+    }
+
+    .hero-title span { color: var(--live-accent); }
+
+    .hero-desc {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+    }
+
+    .hero-meta {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: right;
+    }
+
+    .hero-meta-item {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .hero-meta-item strong {
+      display: block;
+      color: var(--live-white);
+      font-size: 0.85rem;
+    }
+
+    /* ===== TABS NAV ===== */
+    .tabs-nav {
+      background: rgba(6,25,42,0.95);
+      border-bottom: 2px solid rgba(0,232,0,0.2);
+      padding: 0 60px;
+      display: flex;
+      gap: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+    }
+
+    .tab-btn {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 18px 28px;
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.3s var(--ease-fluid);
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover { color: rgba(255,255,255,0.85); }
+
+    .tab-btn.active {
+      color: var(--live-accent);
+      border-bottom-color: var(--live-accent);
+    }
+
+    /* ===== CONTENT AREA ===== */
+    .content-area { padding: 60px; }
+
+    .tab-panel { display: none; animation: fadeIn 0.4s var(--ease-fluid); }
+    .tab-panel.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--live-accent);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--live-white);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-family: 'Merriweather', serif;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      max-width: 700px;
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px 32px;
+      transition: all 0.3s var(--ease-fluid);
+    }
+
+    .card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(0,232,0,0.25);
+      transform: translateY(-2px);
+    }
+
+    /* ===== DIAGNOSTICO ===== */
+    .diagnostic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .diag-card {
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .diag-card.problems {
+      background: rgba(255, 59, 59, 0.06);
+      border-color: rgba(255, 59, 59, 0.2);
+    }
+
+    .diag-card.opportunities {
+      background: rgba(0, 232, 0, 0.04);
+      border-color: rgba(0, 232, 0, 0.2);
+    }
+
+    .diag-card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .diag-card.problems .diag-card-title { color: #ff6b6b; }
+    .diag-card.opportunities .diag-card-title { color: var(--live-accent); }
+
+    .diag-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .diag-list li {
+      font-family: 'Merriweather', serif;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .diag-list li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    .diag-card.problems .diag-list li::before { color: #ff6b6b; }
+    .diag-card.opportunities .diag-list li::before { color: var(--live-accent); }
+
+    /* MATRIX */
+    .matrix-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--live-white);
+      margin-bottom: 20px;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .matrix-card {
+      border-radius: 14px;
+      padding: 22px 24px;
+      border: 1px solid;
+    }
+
+    .matrix-card.quick-win {
+      background: rgba(0,232,0,0.07);
+      border-color: rgba(0,232,0,0.3);
+    }
+
+    .matrix-card.structural {
+      background: rgba(30, 120, 255, 0.07);
+      border-color: rgba(30, 120, 255, 0.3);
+    }
+
+    .matrix-card.incremental {
+      background: rgba(255, 200, 0, 0.05);
+      border-color: rgba(255, 200, 0, 0.25);
+    }
+
+    .matrix-card.distraction {
+      background: rgba(150, 150, 150, 0.05);
+      border-color: rgba(150, 150, 150, 0.15);
+    }
+
+    .matrix-tag {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 3px 8px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .matrix-card.quick-win .matrix-tag { background: rgba(0,232,0,0.2); color: var(--live-accent); }
+    .matrix-card.structural .matrix-tag { background: rgba(30,120,255,0.2); color: #5a9fff; }
+    .matrix-card.incremental .matrix-tag { background: rgba(255,200,0,0.15); color: #ffd93d; }
+    .matrix-card.distraction .matrix-tag { background: rgba(150,150,150,0.15); color: #aaa; }
+
+    .matrix-card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--live-white);
+      margin-bottom: 8px;
+    }
+
+    .matrix-card-desc {
+      font-family: 'Merriweather', serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    .priority-badge {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .matrix-card.quick-win .priority-badge { color: var(--live-accent); }
+    .matrix-card.structural .priority-badge { color: #5a9fff; }
+    .matrix-card.incremental .priority-badge { color: #ffd93d; }
+    .matrix-card.distraction .priority-badge { color: #888; }
+
+    /* ===== PLANO DE ACAO ===== */
+    .timeline {
+      position: relative;
+      padding-left: 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--live-accent), rgba(0,232,0,0.1));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 28px 32px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      margin-bottom: 20px;
+      transition: all 0.3s var(--ease-fluid);
+    }
+
+    .timeline-item:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(0,232,0,0.2);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -45px;
+      top: 28px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--live-deep);
+      border: 2px solid var(--live-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--live-accent);
+      box-shadow: 0 0 20px rgba(0,232,0,0.2);
+    }
+
+    .timeline-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .timeline-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--live-white);
+    }
+
+    .timeline-duration {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--live-accent);
+      background: rgba(0,232,0,0.1);
+      border: 1px solid rgba(0,232,0,0.2);
+      border-radius: 6px;
+      padding: 4px 12px;
+      white-space: nowrap;
+    }
+
+    .timeline-area {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      font-family: 'Merriweather', serif;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+    }
+
+    .timeline-deliverables {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .deliverable-chip {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      background: rgba(0,232,0,0.08);
+      border: 1px solid rgba(0,232,0,0.15);
+      color: rgba(255,255,255,0.7);
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    /* ===== ESCOPO ===== */
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .scope-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 24px;
+      transition: all 0.3s var(--ease-fluid);
+    }
+
+    .scope-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(0,232,0,0.2);
+    }
+
+    .scope-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(0,232,0,0.1);
+      border: 1px solid rgba(0,232,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--live-accent);
+    }
+
+    .scope-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--live-white);
+      margin-bottom: 10px;
+    }
+
+    .scope-desc {
+      font-family: 'Merriweather', serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+    }
+
+    /* ===== INVESTIMENTO ===== */
+    .investment-hero {
+      background: linear-gradient(135deg, rgba(0,232,0,0.08), rgba(0,232,0,0.03));
+      border: 2px solid rgba(0,232,0,0.3);
+      border-radius: 20px;
+      padding: 48px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .investment-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--live-accent);
+      margin-bottom: 16px;
+    }
+
+    .investment-value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--live-accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .investment-extenso {
+      font-family: 'Merriweather', serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+    }
+
+    .investment-divider {
+      width: 60px;
+      height: 2px;
+      background: rgba(0,232,0,0.3);
+      margin: 0 auto 24px;
+    }
+
+    .investment-payment {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .investment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .investment-option {
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid;
+    }
+
+    .investment-option.primary {
+      background: rgba(0,232,0,0.06);
+      border-color: rgba(0,232,0,0.3);
+    }
+
+    .investment-option.secondary {
+      background: rgba(30,120,255,0.05);
+      border-color: rgba(30,120,255,0.25);
+    }
+
+    .option-tag {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 3px 8px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .investment-option.primary .option-tag { background: rgba(0,232,0,0.15); color: var(--live-accent); }
+    .investment-option.secondary .option-tag { background: rgba(30,120,255,0.15); color: #5a9fff; }
+
+    .option-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--live-white);
+      margin-bottom: 8px;
+    }
+
+    .option-desc {
+      font-family: 'Merriweather', serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    .option-value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-top: 14px;
+    }
+
+    .investment-option.primary .option-value { color: var(--live-accent); }
+    .investment-option.secondary .option-value { color: #5a9fff; }
+
+    /* ===== CONTRATO TAB ===== */
+    .contract-summary-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 28px;
+    }
+
+    .contract-summary-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--live-white);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contract-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contract-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .contract-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .contract-row-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      min-width: 160px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contract-row-value {
+      font-family: 'Merriweather', serif;
+      font-size: 0.88rem;
+      color: var(--live-white);
+    }
+
+    .btn-open-contract {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: var(--live-accent);
+      color: var(--live-deep);
+      border: none;
+      border-radius: 10px;
+      padding: 16px 32px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s var(--spring-bounce));
+    }
+
+    .btn-open-contract:hover {
+      background: #00ff00;
+      transform: scale(1.03);
+      box-shadow: 0 8px 32px rgba(0,232,0,0.4);
+    }
+
+    /* ===== INFO BOXES ===== */
+    .info-box {
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .info-box.notice {
+      background: rgba(0,232,0,0.05);
+      border: 1px solid rgba(0,232,0,0.2);
+    }
+
+    .info-box.warning {
+      background: rgba(255,200,0,0.05);
+      border: 1px solid rgba(255,200,0,0.2);
+    }
+
+    .info-box-icon {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-box.notice .info-box-icon { color: var(--live-accent); }
+    .info-box.warning .info-box-icon { color: #ffd93d; }
+
+    .info-box-text {
+      font-family: 'Merriweather', serif;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.75;
+    }
+
+    .info-box-text strong {
+      color: var(--live-white);
+      font-weight: 700;
+    }
+
+    /* ===== DIAGNOSTICO PARAGRAFO ===== */
+    .diag-paragraph {
+      background: rgba(255,255,255,0.03);
+      border-left: 4px solid var(--live-accent);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      font-family: 'Merriweather', serif;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.9;
+    }
+
+    /* ===== TABLE PRECOS ===== */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 28px;
+    }
+
+    .price-table th {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.4);
+      padding: 10px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .price-table td {
+      font-family: 'Merriweather', serif;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.75);
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top;
+    }
+
+    .price-table tr:hover td { background: rgba(255,255,255,0.03); }
+
+    .price-table td.value {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: var(--live-accent);
+      white-space: nowrap;
+    }
+
+    .price-table tfoot td {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      color: var(--live-white);
+      font-size: 1rem;
+      border-top: 2px solid rgba(0,232,0,0.3);
+      border-bottom: none;
+    }
+
+    .price-table tfoot td.total-value {
+      color: var(--live-accent);
+      font-size: 1.2rem;
+    }
+
+    /* ===== NEXT STEPS ===== */
+    .next-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .next-step-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s var(--ease-fluid);
+    }
+
+    .next-step-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(0,232,0,0.2);
+    }
+
+    .next-step-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: rgba(0,232,0,0.3);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .next-step-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--live-white);
+      margin-bottom: 8px;
+    }
+
+    .next-step-desc {
+      font-family: 'Merriweather', serif;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+    }
+
+    /* ===== FOOTER ===== */
+    .page-footer {
+      background: rgba(0,0,0,0.3);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 32px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-logo img { height: 32px; opacity: 0.7; }
+
+    .footer-info {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+    }
+
+    .developer-credit {
+      font-size: 0.7rem;
+      opacity: 0.4;
+      font-style: italic;
+      color: rgba(255,255,255,0.5);
+      text-align: right;
+      font-family: 'Merriweather', serif;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-inner { flex-direction: column; padding: 36px 24px; }
+      .hero-meta { text-align: left; }
+      .hero-title { font-size: 1.8rem; }
+      .tabs-nav { padding: 0 24px; overflow-x: auto; }
+      .content-area { padding: 36px 24px; }
+      .diagnostic-grid, .matrix-grid, .investment-grid, .scope-grid, .next-steps-grid { grid-template-columns: 1fr; }
+      .page-footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO HEADER -->
+<header class="hero">
+  <div class="hero-accent-bar"></div>
+  <div class="hero-inner">
+    <div class="hero-logo-area">
+      <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-36.png" alt="Live Consultoria" onerror="this.style.display='none'">
+      <div class="logo-divider"></div>
+      <span class="hero-badge">Framework M.A.P.C.A</span>
+    </div>
+
+    <div class="hero-text">
+      <div class="hero-subtitle">Proposta Comercial · Junho 2026</div>
+      <h1 class="hero-title">WMX Global Imports<br><span>& Negócios Paraguai</span></h1>
+      <p class="hero-desc">Estruturação estratégica de dois negócios de importação: tecidos via Lei Maquila e drones agrícolas — da inteligência de mercado à primeira remessa.</p>
+    </div>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <strong>Washington</strong>
+        Empresário / Empreendedor
+      </div>
+      <div class="hero-meta-item">
+        <strong>Luiz Portal</strong>
+        Consultor Responsável
+      </div>
+      <div class="hero-meta-item">
+        <strong>24 de Junho de 2026</strong>
+        Data de Apresentação
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TABS NAV -->
+<nav class="tabs-nav" id="tabs-nav">
+  <button class="tab-btn active" onclick="showTab('diagnostico', this)" id="tab-diagnostico">
+    <i data-lucide="search" width="16" height="16"></i>
+    M — Mapeamento
+  </button>
+  <button class="tab-btn" onclick="showTab('plano', this)" id="tab-plano">
+    <i data-lucide="layers" width="16" height="16"></i>
+    A — Arquitetura
+  </button>
+  <button class="tab-btn" onclick="showTab('escopo', this)" id="tab-escopo">
+    <i data-lucide="file-text" width="16" height="16"></i>
+    P — Precificação
+  </button>
+  <button class="tab-btn" onclick="showTab('investimento', this)" id="tab-investimento">
+    <i data-lucide="trending-up" width="16" height="16"></i>
+    Investimento
+  </button>
+  <button class="tab-btn" onclick="showTab('contrato', this)" id="tab-contrato">
+    <i data-lucide="pen-line" width="16" height="16"></i>
+    Contrato & PDF
+  </button>
+</nav>
+
+<!-- ============================================================ -->
+<!-- TAB 1: MAPEAMENTO E ANÁLISE -->
+<!-- ============================================================ -->
+<main class="content-area">
+
+  <section class="tab-panel active" id="panel-diagnostico">
+    <div class="section-header">
+      <div class="section-label">Etapa M — Mapeamento e Análise</div>
+      <h2 class="section-title">Diagnóstico Estratégico</h2>
+      <p class="section-desc">Análise completa da situação atual, oportunidades identificadas na reunião de diagnóstico e matriz de priorização por impacto × esforço.</p>
+    </div>
+
+    <div class="diag-paragraph">
+      Washington é um empreendedor com network sólido — ex-assessor de alta renda com carteira de ~R$ 200 milhões —, capital de investidores mobilizados (R$ 100K a R$ 300K confirmados), dois sócios especializados nos segmentos-alvo e demanda de mercado já validada em ambos os nichos: <strong>confecção/tecidos</strong> e <strong>drones agrícolas de pulverização</strong>. O gargalo central não é produto nem canal de vendas, mas <strong>a inteligência de operação internacional</strong>: nunca importou, não conhece o trâmite aduaneiro real, não tem fornecedores validados e não possui estrutura jurídico-tributária para operar via Lei Maquila no Paraguai. Sem esse alicerce, os dois negócios correm risco real de desperdício de capital na primeira remessa. A Live Consultoria entra para encurtar esse caminho com network qualificado, evitar os erros clássicos de quem começa do zero e gerar o estudo de viabilidade que o investidor exige para liberar os recursos.
+    </div>
+
+    <div class="diagnostic-grid">
+      <div class="diag-card problems">
+        <div class="diag-card-title">
+          <i data-lucide="alert-triangle" width="18" height="18"></i>
+          Problemas Identificados
+        </div>
+        <ul class="diag-list">
+          <li>Zero experiência prévia com importação e trâmite aduaneiro</li>
+          <li>Fornecedores chineses sem validação — risco de produto mala ou golpe</li>
+          <li>Desconhecimento dos requisitos e prazos da Lei Maquila (Paraguai)</li>
+          <li>Ausência de estudo de viabilidade financeira para apresentar ao investidor</li>
+          <li>Dependência de um único canal (Mercado Livre) para drones — risco de bloqueio</li>
+          <li>Sazonalidade não planejada: tecidos (nov–jan) e drones (out–nov) exigem preparação antecipada</li>
+          <li>Duas empresas novas sendo estruturadas simultaneamente sem governança societária definida</li>
+          <li>Mão de obra qualificada para montagem de drones escassa no Paraguai</li>
+        </ul>
+      </div>
+      <div class="diag-card opportunities">
+        <div class="diag-card-title">
+          <i data-lucide="zap" width="18" height="18"></i>
+          Oportunidades de Melhoria
+        </div>
+        <ul class="diag-list">
+          <li>Sócio têxtil com 20+ anos de mercado e compradores já mapeados</li>
+          <li>Sócio drone com network direto em concessionárias (ex-New Holland)</li>
+          <li>Investidor confirmado disposto a R$ 100K–300K por negócio</li>
+          <li>Network Luiz Portal: contador com acesso ao Secretário de Comércio do Paraguai</li>
+          <li>Margem absurda no drone agrícola: ~R$ 50K custo vs. R$ 200K venda</li>
+          <li>Plataforma alternativa ao Mercado Livre já no ar (parceiro Eduardo)</li>
+          <li>Demanda rural com fazendeiros já na base de relacionamento de Washington</li>
+          <li>Janela de tempo favorável: preparação agora para safra (out) e verão (nov)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="matrix-title">📊 Matriz de Priorização — Impacto × Esforço</div>
+    <div class="matrix-grid">
+      <div class="matrix-card quick-win">
+        <span class="matrix-tag">⚡ Quick Win</span>
+        <div class="matrix-card-title">Estudo de Viabilidade Financeira</div>
+        <div class="matrix-card-desc">Elaborar DRE projetado, breakeven e ROI para cada negócio. Documento que o investidor exige para liberar capital. Gerado em até 1 semana com dados fornecidos.</div>
+        <div class="priority-badge">▲ PRIORIDADE MÁXIMA — alto impacto, baixo esforço</div>
+      </div>
+
+      <div class="matrix-card quick-win">
+        <span class="matrix-tag">⚡ Quick Win</span>
+        <div class="matrix-card-title">Validação e Curadoria de Fornecedores</div>
+        <div class="matrix-card-desc">Acionamento da rede Eduardo (20+ anos China) para validar fornecedores de tecido e peças de drone já pesquisados por Washington. Evita erro fatal na primeira compra.</div>
+        <div class="priority-badge">▲ PRIORIDADE MÁXIMA — alto impacto, baixo esforço</div>
+      </div>
+
+      <div class="matrix-card structural">
+        <span class="matrix-tag">🏗️ Projeto Estrutural</span>
+        <div class="matrix-card-title">Estruturação Lei Maquila — Paraguai</div>
+        <div class="matrix-card-desc">Mapeamento jurídico-tributário completo: requisitos de capital, parceiro local, cronograma de implantação. Acesso direto ao Secretário de Comércio via rede Live.</div>
+        <div class="priority-badge">→ MÉDIO PRAZO — alto impacto, esforço significativo</div>
+      </div>
+
+      <div class="matrix-card structural">
+        <span class="matrix-tag">🏗️ Projeto Estrutural</span>
+        <div class="matrix-card-title">Governança Societária das Duas Empresas</div>
+        <div class="matrix-card-desc">Formatação de acordo de sócios, estrutura de vesting, equity entre investidor/operador. Previne conflito que destrói sociedades após primeiros lucros.</div>
+        <div class="priority-badge">→ MÉDIO PRAZO — alto impacto, esforço moderado</div>
+      </div>
+
+      <div class="matrix-card incremental">
+        <span class="matrix-tag">📈 Melhoria Incremental</span>
+        <div class="matrix-card-title">Canal Alternativo ao Mercado Livre</div>
+        <div class="matrix-card-desc">Integração com plataforma do parceiro Eduardo + venda direta a fazendeiros. Reduz dependência de um único canal e garante diversificação de receita.</div>
+        <div class="priority-badge">◎ QUANDO POSSÍVEL — impacto médio, baixo esforço</div>
+      </div>
+
+      <div class="matrix-card distraction">
+        <span class="matrix-tag">❌ Distração</span>
+        <div class="matrix-card-title">Cash Burn Imediato no E-commerce</div>
+        <div class="matrix-card-desc">Queimar capital para ganhar relevância no Mercado Livre antes de estruturar a importação é arriscado. Sem margem saudável, o volume não se sustenta.</div>
+        <div class="priority-badge">✗ EVITAR — baixo impacto, alto esforço / risco</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 2: ARQUITETURA DO PLANO -->
+  <!-- ============================================================ -->
+  <section class="tab-panel" id="panel-plano">
+    <div class="section-header">
+      <div class="section-label">Etapa A — Arquitetura do Plano</div>
+      <h2 class="section-title">Plano de Ação Estruturado</h2>
+      <p class="section-desc">Sequência lógica de entregas para estruturar os dois negócios em 12 semanas — da inteligência de mercado à primeira remessa operacional.</p>
+    </div>
+
+    <div class="info-box notice">
+      <div class="info-box-icon"><i data-lucide="info" width="20" height="20"></i></div>
+      <div class="info-box-text"><strong>Prazo total estimado: 12 semanas.</strong> As etapas 1 e 2 são executadas em paralelo para ganhar tempo. A primeira remessa de teste (tecido ou peças drone) está prevista para a semana 8–10, respeitando a janela de sazonalidade de outubro/novembro.</div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot">01</div>
+        <div class="timeline-header">
+          <div class="timeline-title">Levantamento e Diagnóstico Financeiro dos Dois Negócios</div>
+          <div class="timeline-duration">Semana 1–2</div>
+        </div>
+        <div class="timeline-area">Financeiro · Inteligência de Negócio</div>
+        <div class="timeline-desc">Coleta e estruturação dos dados financeiros base: mix de produtos (tecidos e peças de drone), volume atual de vendas do sócio têxtil, margens praticadas hoje, capacidade de investimento confirmada por negócio e canais de venda ativos. Elaboração de DRE projetado em 3 cenários (pessimista, realista e otimista) e cálculo de breakeven para apresentação ao investidor. Este estudo é o pré-requisito para liberar o capital.</div>
+        <div class="timeline-deliverables">
+          <span class="deliverable-chip">DRE Projetado (3 cenários)</span>
+          <span class="deliverable-chip">Cálculo de Breakeven</span>
+          <span class="deliverable-chip">Projeção de ROI para investidor</span>
+          <span class="deliverable-chip">Planilha de viabilidade</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">02</div>
+        <div class="timeline-header">
+          <div class="timeline-title">Curadoria e Validação de Fornecedores (China)</div>
+          <div class="timeline-duration">Semana 1–3</div>
+        </div>
+        <div class="timeline-area">Supply Chain · Network Internacional</div>
+        <div class="timeline-desc">Acionamento do parceiro Eduardo (20+ anos em importação da China) para analisar os fornecedores já levantados por Washington. Checklist de qualidade, histórico comercial, capacidade de produção, certificações e prazos de entrega para tecidos e peças de drone agrícola. Validação de 2 a 3 fornecedores por categoria. Definição do fornecedor principal e backup para cada negócio.</div>
+        <div class="timeline-deliverables">
+          <span class="deliverable-chip">Relatório de fornecedores validados</span>
+          <span class="deliverable-chip">Ficha técnica por fornecedor</span>
+          <span class="deliverable-chip">Termos de cotação negociados</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">03</div>
+        <div class="timeline-header">
+          <div class="timeline-title">Estudo de Viabilidade — Lei Maquila (Paraguai)</div>
+          <div class="timeline-duration">Semana 2–5</div>
+        </div>
+        <div class="timeline-area">Jurídico-Tributário · Expansão Internacional</div>
+        <div class="timeline-desc">Mapeamento completo dos requisitos da Lei Maquila: capital mínimo investido no Paraguai (US$ 70K comprometidos ao longo do tempo), estrutura de CNPJ paraguaio, requisitos de parceiro local, carga tributária real vs. importação direta da China, e análise de viabilidade para montagem de drones (localização industrial, disponibilidade de mão de obra por região). Contato com Secretaria de Comércio do Paraguai via rede Live e visita técnica planejada.</div>
+        <div class="timeline-deliverables">
+          <span class="deliverable-chip">Relatório jurídico-tributário Maquila</span>
+          <span class="deliverable-chip">Comparativo custo: China direta vs. Paraguai</span>
+          <span class="deliverable-chip">Mapa de regiões industriais aptas</span>
+          <span class="deliverable-chip">Cronograma de implantação</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">04</div>
+        <div class="timeline-header">
+          <div class="timeline-title">Governança Societária — Acordo de Sócios</div>
+          <div class="timeline-duration">Semana 3–5</div>
+        </div>
+        <div class="timeline-area">Jurídico · Estrutura Societária</div>
+        <div class="timeline-desc">Formatação da estrutura de capital e responsabilidades para cada negócio: divisão de equity entre Washington, sócio especialista e investidor; cláusulas de vesting; política de distribuição de lucros; condições de saída; responsabilidades operacionais de cada parte. Prevenção de conflito societário pós-validação do negócio. Formalização junto à rede jurídica da Live.</div>
+        <div class="timeline-deliverables">
+          <span class="deliverable-chip">Acordo de sócios rascunho</span>
+          <span class="deliverable-chip">Cap table de cada empresa</span>
+          <span class="deliverable-chip">Cláusulas de vesting definidas</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">05</div>
+        <div class="timeline-header">
+          <div class="timeline-title">Primeira Remessa Teste — Tecidos (China → Brasil)</div>
+          <div class="timeline-duration">Semana 6–10</div>
+        </div>
+        <div class="timeline-area">Operacional · Logística Internacional</div>
+        <div class="timeline-desc">Execução da primeira importação de tecido diretamente da China para o Brasil em caráter de teste e validação: volume reduzido para minimizar risco, acompanhamento do trâmite aduaneiro real, checagem de qualidade no recebimento e comparação de custo-benefício vs. fornecedor nacional. Preparação para a maquila começa em paralelo com aprendizado prático da operação logística.</div>
+        <div class="timeline-deliverables">
+          <span class="deliverable-chip">Primeira remessa recebida e validada</span>
+          <span class="deliverable-chip">Relatório de custo real da operação</span>
+          <span class="deliverable-chip">Lições aprendidas documentadas</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">06</div>
+        <div class="timeline-header">
+          <div class="timeline-title">Primeira Remessa Teste — Peças de Drone (Validação Canal)</div>
+          <div class="timeline-duration">Semana 8–12</div>
+        </div>
+        <div class="timeline-area">Operacional · Vendas B2B Rural</div>
+        <div class="timeline-desc">Importação das primeiras peças/drones validados, com foco em venda direta via rede de concessionárias (sócio ex-New Holland) e fazendeiros da base de Washington. Teste de precificação, validação da margem real e primeiros fechamentos comerciais. Ativação da plataforma parceira como canal alternativo ao Mercado Livre. Ajuste fino do modelo de negócio antes de escalar.</div>
+        <div class="timeline-deliverables">
+          <span class="deliverable-chip">Primeiros drones/peças vendidos</span>
+          <span class="deliverable-chip">Margem real validada</span>
+          <span class="deliverable-chip">Canais de venda ativados</span>
+          <span class="deliverable-chip">Relatório de go-to-market</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 3: PRECIFICAÇÃO E ESCOPO -->
+  <!-- ============================================================ -->
+  <section class="tab-panel" id="panel-escopo">
+    <div class="section-header">
+      <div class="section-label">Etapa P — Precificação e Escopo</div>
+      <h2 class="section-title">Escopo Detalhado & Investimento</h2>
+      <p class="section-desc">Entregáveis específicos de cada módulo e composição do investimento total da consultoria.</p>
+    </div>
+
+    <div class="scope-grid">
+      <div class="scope-card">
+        <div class="scope-icon"><i data-lucide="bar-chart-2" width="22" height="22"></i></div>
+        <div class="scope-title">Estudo de Viabilidade Financeira</div>
+        <div class="scope-desc">DRE projetado para 12 meses nos dois negócios, cálculo de ponto de equilíbrio, análise de margem por produto/canal, projeção de ROI para apresentação ao investidor. Inclui planilha editável e relatório executivo em PDF.</div>
+      </div>
+
+      <div class="scope-card">
+        <div class="scope-icon"><i data-lucide="globe" width="22" height="22"></i></div>
+        <div class="scope-title">Curadoria de Fornecedores China</div>
+        <div class="scope-desc">Análise e validação de até 4 fornecedores (2 de tecido, 2 de drone/peças) via rede Eduardo. Fichas técnicas, histórico comercial, capacidade produtiva, certificações e indicação fundamentada de fornecedor principal e backup.</div>
+      </div>
+
+      <div class="scope-card">
+        <div class="scope-icon"><i data-lucide="map" width="22" height="22"></i></div>
+        <div class="scope-title">Estruturação Lei Maquila — Paraguai</div>
+        <div class="scope-desc">Mapeamento jurídico-tributário completo da Lei Maquila: requisitos, capital necessário, estrutura de empresa, acesso a Secretaria de Comércio, comparativo financeiro de cenários (importação direta vs. maquila) e visita técnica de prospecção ao Paraguai.</div>
+      </div>
+
+      <div class="scope-card">
+        <div class="scope-icon"><i data-lucide="users" width="22" height="22"></i></div>
+        <div class="scope-title">Governança Societária</div>
+        <div class="scope-desc">Estruturação do acordo de sócios para os dois negócios: divisão de equity, cláusulas de vesting, política de distribuição de lucros, responsabilidades e condições de saída. Formalização junto à assessoria jurídica da rede Live.</div>
+      </div>
+
+      <div class="scope-card">
+        <div class="scope-icon"><i data-lucide="package" width="22" height="22"></i></div>
+        <div class="scope-title">Acompanhamento da Primeira Remessa</div>
+        <div class="scope-desc">Suporte operacional ao trâmite da primeira importação (tecidos): seleção do despachante, acompanhamento aduaneiro, conferência de documentação fiscal e entrega. Relatório de custo real vs. projetado e lições aprendidas para escalar.</div>
+      </div>
+
+      <div class="scope-card">
+        <div class="scope-icon"><i data-lucide="target" width="22" height="22"></i></div>
+        <div class="scope-title">Go-to-Market — Drones Agrícolas</div>
+        <div class="scope-desc">Estruturação da estratégia comercial para drones: ativação do canal concessionárias (via rede sócio ex-New Holland), script de abordagem a fazendeiros da base de Washington, integração com plataforma alternativa ao Mercado Livre e precificação final validada.</div>
+      </div>
+    </div>
+
+    <div class="info-box warning">
+      <div class="info-box-icon"><i data-lucide="alert-circle" width="20" height="20"></i></div>
+      <div class="info-box-text"><strong>Importante:</strong> Custos de importação (frete, tributos, despachante, INMETRO), capital de giro para remessas, e eventuais taxas de registro de empresa no Paraguai <strong>não estão incluídos</strong> no valor da consultoria. São investimentos próprios do empreendedor. A Live auxilia no planejamento e no acesso aos melhores parceiros para cada um desses itens.</div>
+    </div>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Módulo / Entregável</th>
+          <th>Prazo</th>
+          <th style="text-align:right">Investimento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estudo de Viabilidade Financeira (dois negócios)</td>
+          <td>2 semanas</td>
+          <td class="value" style="text-align:right">R$ 6.000</td>
+        </tr>
+        <tr>
+          <td>Curadoria e Validação de Fornecedores China (×4)</td>
+          <td>3 semanas</td>
+          <td class="value" style="text-align:right">R$ 5.000</td>
+        </tr>
+        <tr>
+          <td>Estruturação Lei Maquila + Visita Técnica Paraguai</td>
+          <td>5 semanas</td>
+          <td class="value" style="text-align:right">R$ 9.000</td>
+        </tr>
+        <tr>
+          <td>Governança Societária — Acordo de Sócios (×2 empresas)</td>
+          <td>5 semanas</td>
+          <td class="value" style="text-align:right">R$ 5.000</td>
+        </tr>
+        <tr>
+          <td>Acompanhamento 1ª Remessa — Tecidos</td>
+          <td>10 semanas</td>
+          <td class="value" style="text-align:right">R$ 4.000</td>
+        </tr>
+        <tr>
+          <td>Go-to-Market Drones Agrícolas</td>
+          <td>12 semanas</td>
+          <td class="value" style="text-align:right">R$ 6.000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><strong>INVESTIMENTO TOTAL</strong></td>
+          <td class="value total-value" style="text-align:right"><strong>R$ 35.000</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 4: INVESTIMENTO -->
+  <!-- ============================================================ -->
+  <section class="tab-panel" id="panel-investimento">
+    <div class="section-header">
+      <div class="section-label">Resumo Financeiro</div>
+      <h2 class="section-title">Investimento & Condições</h2>
+      <p class="section-desc">Opções de engajamento com a Live Consultoria para estruturação dos dois negócios de importação.</p>
+    </div>
+
+    <div class="investment-hero">
+      <div class="investment-label">Investimento Total da Consultoria</div>
+      <div class="investment-value">R$ 35.000</div>
+      <div class="investment-extenso">Trinta e cinco mil reais</div>
+      <div class="investment-divider"></div>
+      <div class="investment-payment">
+        Pagamento sugerido: <strong>40% na assinatura</strong> (R$ 14.000) · <strong>30% na entrega do estudo de viabilidade</strong> (R$ 10.500) · <strong>30% na conclusão da 1ª remessa</strong> (R$ 10.500)
+      </div>
+    </div>
+
+    <div class="investment-grid">
+      <div class="investment-option primary">
+        <span class="option-tag">✓ Recomendado</span>
+        <div class="option-title">Modelo Serviço Fixo</div>
+        <div class="option-desc">Washington contrata a Live como consultoria prestadora de serviço. Pagamento nos marcos definidos. Live não entra no capital. Ideal para quem quer manter 100% do equity e tem os investidores já definidos.</div>
+        <div class="option-value">R$ 35.000</div>
+      </div>
+
+      <div class="investment-option secondary">
+        <span class="option-tag">⚙ Alternativa</span>
+        <div class="option-title">Modelo Fixo + Participação no Êxito</div>
+        <div class="option-desc">Honorário reduzido combinado com participação em % dos resultados durante 12–24 meses. A Live entra no risco junto com o empreendedor. Detalhe e percentuais a definir após estudo de viabilidade.</div>
+        <div class="option-value">A definir pós-diagnóstico</div>
+      </div>
+    </div>
+
+    <div class="next-steps-grid">
+      <div class="next-step-card">
+        <div class="next-step-num">01</div>
+        <div class="next-step-title">Washington confirma dados</div>
+        <div class="next-step-desc">Mix de produtos, margens atuais (têxtil), volume estimado de vendas, canais ativos e valor confirmado do investidor.</div>
+      </div>
+      <div class="next-step-card">
+        <div class="next-step-num">02</div>
+        <div class="next-step-title">Live apresenta proposta final</div>
+        <div class="next-step-desc">Com os dados em mãos, a Live confirma viabilidade de execução, aciona a rede de parceiros e formaliza os termos de contratação.</div>
+      </div>
+      <div class="next-step-card">
+        <div class="next-step-num">03</div>
+        <div class="next-step-title">Assinatura e início imediato</div>
+        <div class="next-step-desc">Com contrato assinado, a equipe Live inicia o estudo de viabilidade na semana 1. Prazo de 12 semanas para primeira remessa operacional.</div>
+      </div>
+    </div>
+
+    <div class="info-box notice">
+      <div class="info-box-icon"><i data-lucide="lightbulb" width="20" height="20"></i></div>
+      <div class="info-box-text">
+        <strong>Por que contratar antes de ter tudo mapeado?</strong> O custo da consultoria é menor do que o custo de um erro na primeira remessa. Uma importação mal planejada de R$ 100K com fornecedor não validado ou tributação errada pode resultar em mercadoria retida, multa ou prejuízo total. O estudo de viabilidade já paga a consultoria inteira ao evitar o primeiro erro grave.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 5: CONTRATO -->
+  <!-- ============================================================ -->
+  <section class="tab-panel" id="panel-contrato">
+    <div class="section-header">
+      <div class="section-label">Contrato de Prestação de Serviços</div>
+      <h2 class="section-title">Formalização & Contrato PDF</h2>
+      <p class="section-desc">Resumo do contrato de consultoria. Clique no botão abaixo para abrir a versão completa, pronta para impressão e PDF.</p>
+    </div>
+
+    <div class="contract-summary-card">
+      <div class="contract-summary-title">
+        <i data-lucide="file-check" width="22" height="22" style="color:var(--live-accent)"></i>
+        Resumo do Contrato
+      </div>
+      <div class="contract-rows">
+        <div class="contract-row">
+          <span class="contract-row-label">Contratante</span>
+          <span class="contract-row-value">Washington — Empresário (Dados completos a preencher na formalização)</span>
+        </div>
+        <div class="contract-row">
+          <span class="contract-row-label">Contratada</span>
+          <span class="contract-row-value">Live Consultoria Empresarial Ltda · Consultor: Luiz Portal</span>
+        </div>
+        <div class="contract-row">
+          <span class="contract-row-label">Objeto</span>
+          <span class="contract-row-value">Consultoria estratégica para estruturação de dois negócios de importação: (1) Tecidos via Lei Maquila — Paraguai; (2) Drones agrícolas de pulverização. Inclui estudo de viabilidade, curadoria de fornecedores, estruturação tributária e acompanhamento da primeira remessa.</span>
+        </div>
+        <div class="contract-row">
+          <span class="contract-row-label">Valor Total</span>
+          <span class="contract-row-value" style="color:var(--live-accent); font-family:'Poppins',sans-serif; font-weight:700;">R$ 35.000,00 (Trinta e cinco mil reais)</span>
+        </div>
+        <div class="contract-row">
+          <span class="contract-row-label">Forma de Pagamento</span>
+          <span class="contract-row-value">40% na assinatura (R$ 14.000) · 30% na entrega do estudo de viabilidade · 30% na conclusão da 1ª remessa</span>
+        </div>
+        <div class="contract-row">
+          <span class="contract-row-label">Prazo de Execução</span>
+          <span class="contract-row-value">12 semanas corridas a partir da assinatura</span>
+        </div>
+        <div class="contract-row">
+          <span class="contract-row-label">Consultor Responsável</span>
+          <span class="contract-row-value">Luiz Portal — Live Consultoria Empresarial</span>
+        </div>
+        <div class="contract-row">
+          <span class="contract-row-label">Foro</span>
+          <span class="contract-row-value">Comarca de Goiânia — GO</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-bottom: 32px;">
+      <a href="contrato_washington_wmx.html" target="_blank" class="btn-open-contract">
+        <i data-lucide="external-link" width="18" height="18"></i>
+        Abrir Contrato Completo para PDF
+      </a>
+    </div>
+
+    <div class="info-box notice">
+      <div class="info-box-icon"><i data-lucide="printer" width="20" height="20"></i></div>
+      <div class="info-box-text">
+        Para gerar o PDF: abra o arquivo <strong>contrato_washington_wmx.html</strong> no navegador → clique em <strong>"Salvar como PDF"</strong> → Imprimir → Salvar como PDF. Funciona em Chrome, Edge e Firefox.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <div class="footer-logo">
+    <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-36.png" alt="Live Consultoria" onerror="this.style.display='none'">
+  </div>
+  <div class="footer-info">
+    Proposta gerada em 24 de Junho de 2026 · Live Consultoria Empresarial<br>
+    Framework M.A.P.C.A — Luiz Portal
+  </div>
+  <div class="developer-credit">Desenvolvido por Cléber Donato</div>
+</footer>
+
+<script>
+  // Initialize Lucide icons
+  lucide.createIcons();
+
+  // Tab switching
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({ top: document.getElementById('tabs-nav').offsetTop - 10, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
